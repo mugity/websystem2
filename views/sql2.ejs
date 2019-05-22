@@ -9,7 +9,7 @@
         <tr>
             <td><%= result.id %></td>
             <td><%= result['都道府県'] %></td>
-            <td><%= result['人口'] %></td>
+            <td><%= result['population'] %></td>
         </tr>
         <% } %>
     </table>
@@ -18,6 +18,9 @@
             <option value="人口">人口</option>
             <option value="男性">男性</option>
             <option value="女性">女性</option>
+            <option value="国立大学/大学*100">国立割合</option>
+            <option value="公立大学/大学*100">公立割合</option>
+            <option value="私立大学/大学*100">私立割合</option>
         </select>
         表示数：<input type="text" name="number" size="10">
         <input type="submit" value="並び替える">
