@@ -24,6 +24,10 @@ server.get('/', function( req, res ) {
     });
 });
 
+server.get('/threehouses', function( req, res ){
+    res.send( '風花雪月たのしみ' );
+});
+
 server.listen( 80, function() {
     console.log( 'listening on port 80' );
 });
