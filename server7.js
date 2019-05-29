@@ -12,8 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    let query = 'select butting.id, butting.year, butting.player_id, butting.HR limit 10;';
-    connection.query( query, (error, rows, fields) => {
+    connection.query('select id, 都道府県, 人口 from example order by 人口 desc limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
