@@ -24,8 +24,8 @@ server.get('/', function( req, res ) {
     });
 });
 
-server.get('/threehouses', function( req, res ){
-    res.send( '風花雪月たのしみ' );
+server.get('/baseball', function( req, res ){
+    res.send( 'はらへった' );
 });
 
 server.listen( 80, function() {
