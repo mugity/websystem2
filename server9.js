@@ -12,20 +12,40 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    let sorting = req.query.sorting || '人口';
-    let number = req.query.number || 10;
-    let query = 'select id, 都道府県, ' + sorting + ' as population from example order by ' + sorting + ' desc limit ' + number + ';';
+    res.send('What happened to Dimitri');
+});
+
+server.get('/players', function( req, res ){
+    let query = 'select * from player;';
     console.log( query );
     connection.query( query, (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql2.ejs', { content: rows });
+        res.render( 'index.ejs', { content: rows });
     });
 });
 
-server.get('/baseball', function( req, res ){
-    res.send( 'はらへった' );
+server.get('/teams', function( req, res ){
+    let query = 'select * from team;';
+    console.log( query );
+    connection.query( query, (error, rows, fields) => {
+        if( error ) {
+            console.log('Query Error');
+        }
+        res.render( 'index.ejs', { content: rows });
+    });
+});
+
+server.get('/teams',function(req,res){
+    let query = 'select * from batting;';
+    console.log(query);
+    connection.query( query, (error, rows, fields) => {
+        if( error ) {
+            console.log('Query Error');
+        }
+        res.render( 'index.ejs', { content: rows });
+    });
 });
 
 server.listen( 80, function() {
