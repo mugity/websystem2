@@ -22,7 +22,7 @@ server.get('/players', function( req, res ){
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'index.ejs', { content: rows });
+        res.render( 'index.ejs', {title: 'Express' });
     });
 });
 
@@ -33,7 +33,7 @@ server.get('/teams', function( req, res ){
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'index.ejs', { content: rows });
+        res.render( 'index.ejs', {title: 'Express' });
     });
 });
 
@@ -44,7 +44,7 @@ server.get('/teams',function(req,res){
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'index.ejs', { content: rows });
+        res.render( 'index.ejs', {title: 'Express' });
     });
 });
 
