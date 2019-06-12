@@ -37,7 +37,7 @@ server.get('/teams', function( req, res ){
     });
 });
 
-server.get('/teams',function(req,res){
+server.get('/battings',function(req,res){
     let query = 'select * from batting;';
     console.log(query);
     connection.query( query, (error, rows, fields) => {
